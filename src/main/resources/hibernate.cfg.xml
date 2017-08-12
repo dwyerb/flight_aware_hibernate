@@ -23,6 +23,7 @@
         <property name="hibernate.default_schema">
             flightaware
         </property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- List of XML mapping files -->
         <mapping resource="net.muroc/flight_point.hbm.xml"></mapping>
