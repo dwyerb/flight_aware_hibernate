@@ -8,22 +8,22 @@
             org.hibernate.dialect.PostgreSQL81Dialect
         </property>
         <property name="hibernate.connection.driver_class">
-            com.mysql.jdbc.Driver
+            org.postgresql.Driver
         </property>
 
         <!-- Assume test is the database name -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/test
+            jdbc:mysql://localhost/postgis20
         </property>
         <property name="hibernate.connection.username">
-            root
+            dart_admin
         </property>
         <property name="hibernate.connection.password">
-            root123
+            dilfer
         </property>
 
         <!-- List of XML mapping files -->
-        <mapping resource="Employee.hbm.xml"/>
+        <mapping resource="flight_point.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>
