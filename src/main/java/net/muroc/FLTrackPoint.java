@@ -11,146 +11,161 @@ public class FLTrackPoint {
     private String flightUID;
     private String hex;
 
-    public String gethex() {
+    public String getHex() {
         return hex;
     }
 
-    public void sethex(String hex) {
+    public void setHex(String hex) {
         this.hex = hex;
     }
 
+
     private String squawk;
 
-    public String getsquawk() {
+    public String getSquawk() {
         return squawk;
     }
 
-    public void setsquawk(String squawk) {
+    public void setSquawk(String squawk) {
         this.squawk = squawk;
     }
 
     private String flight;
 
-    public String getflight() {
+    public String getFlight() {
         return flight;
     }
 
-    public void setflight(String flight) {
+    public void setFlight(String flight) {
         this.flight = flight;
     }
 
+
     private double lat;
 
-    public double getlat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setlat(double lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
+
     private double lon;
 
-    public double getlon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setlon(double lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
-    private Double nucp;
 
-    public double getnucp() {
+    private double nucp;
+
+    public double getNucp() {
         return nucp;
     }
 
-    public void setnucp(double nucp) {
+    public void setNucp(double nucp) {
         this.nucp = nucp;
     }
 
-    private double seen_pos;
 
-    public double getseen_pos() {
+    private int seen_pos;
+
+    public int getSeen_pos() {
         return seen_pos;
     }
 
-    public void setseen_pos(double seen_pos) {
+    public void setSeen_pos(int seen_pos) {
         this.seen_pos = seen_pos;
     }
 
+
     private int altitude;
 
-    public int getaltitude() {
+    public int getAltitude() {
         return altitude;
     }
 
-    public void setaltitude(int altitude) {
+    public void setAltitude(int altitude) {
         this.altitude = altitude;
     }
 
+
     private int vert_rate;
 
-    public int getvert_rate() {
+    public int getVert_rate() {
         return vert_rate;
     }
 
-    public void setvert_rate(int vert_rate) {
+    public void setVert_rate(int vert_rate) {
         this.vert_rate = vert_rate;
     }
 
+
     private int track;
 
-    public int gettrack() {
+    public int getTrack() {
         return track;
     }
 
-    public void settrack(int track) {
+    public void setTrack(int track) {
         this.track = track;
     }
 
+
+
     private int speed;
 
-    public int getspeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public void setspeed(int speed) {
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
+
 
     private String category;
     private String Omlat;
     private String Otisb;
     private int messages;
 
-    public int getmessages() {
+    public int getMessages() {
         return messages;
     }
 
-    public void setmessages(int messages) {
+    public void setMessages(int messages) {
         this.messages = messages;
     }
 
-    private double seen;
 
-    public double getseen() {
+
+    private int seen;
+
+    public int getSeen() {
         return seen;
     }
 
-    public void setseen(int seen) {
+    public void setSeen(int seen) {
         this.seen = seen;
     }
 
+
     private double rssi;
 
-    public double getrssi() {
+    public double getRssi() {
         return rssi;
     }
 
-    public void setrssi(double rssi) {
+    public void setRssi(double rssi) {
         this.rssi = rssi;
     }
+
 
     public FLTrackPoint() {
 

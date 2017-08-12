@@ -12,14 +12,14 @@
             <generator class="assigned"/>
         </id>
         <property name="hex" column="hex" type="string"/>
-        <property name="squawk" column="squawk" type="string"/>
-        <property name="flight" column="flight" type="string"/>
+        <property name="squawk" column="squawk" type="string"></property>
+        <property name="flight" column="flight" type="string"></property>
         <property name="lat" column="lat" type="double"/>
         <property name="lon" column="lon" type="double"/>
         <property name="nucp" column="NUCP" type="double"></property>
         <property name="seen_pos" column="seen_pos" type="integer"/>
         <property name="altitude" column="altitude" type="integer"/>
-        <property name="vert_Rate" column="vert_rate" type="integer"/>
+        <property name="vert_rate" column="vert_rate" type="integer"/>
         <property name="track" column="track" type="integer"/>
         <property name="speed" column="speed" type="integer"/>
         <property name="messages" column="messages" type="integer"/>
