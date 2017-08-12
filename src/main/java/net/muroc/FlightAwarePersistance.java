@@ -18,14 +18,31 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 /**
  * Created by Brendan on 8/6/2017.
  */
 public class FlightAwarePersistance {
 
+    private static SessionFactory factory;
+    //public List<FLTrackPoint> results;
+
     public static void main(String[] args) throws Exception
     {
+        try {
+            factory = new Configuration().configure().buildSessionFactory();
+            System.out.println("test01");
+        }
+        catch (Throwable ex)
+        {
+            System.err.println("Failed to create SessionFactory Object" + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
         String url = "http://192.168.0.6:8080/data/aircraft.json";
         InputStream source = retrieveStream(url);
 
@@ -33,7 +50,24 @@ public class FlightAwarePersistance {
         Reader reader = new InputStreamReader(source);
         Messages messages = gson.fromJson(reader, Messages.class);
         List<FLTrackPoint> results = messages.aircraft;
+        results = messages.aircraft;
         System.out.println("test");
+        Session session = factory.openSession();
+        Transaction tx = null;
+        Integer FlightPointID = null;
+        try
+        {
+            tx = session.beginTransaction();
+            FlightPointID = (Integer) session.save(results.get(0));
+            tx.commit();
+        }
+        catch (HibernateException e)
+        {
+            if(tx!=null) tx.rollback();
+            e.printStackTrace();
+        }finally{
+            session.close();
+        }
 
 
 
@@ -64,6 +98,10 @@ public class FlightAwarePersistance {
 
 
     }
+
+    FlightAwarePersistance FEP = new FlightAwarePersistance();
+
+
     private static InputStream retrieveStream(String url) {
         DefaultHttpClient client = new DefaultHttpClient();
         HttpGet getRequest = new HttpGet(url);

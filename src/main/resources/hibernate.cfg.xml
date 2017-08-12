@@ -5,15 +5,14 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.dialect">
-            org.hibernate.dialect.PostgreSQL81Dialect
-        </property>
+            org.hibernate.dialect.PostgreSQL81Dialect     </property>
         <property name="hibernate.connection.driver_class">
             org.postgresql.Driver
         </property>
 
         <!-- Assume test is the database name -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/postgis20
+            jdbc:postgresql://localhost/postgis20
         </property>
         <property name="hibernate.connection.username">
             dart_admin
@@ -21,9 +20,12 @@
         <property name="hibernate.connection.password">
             dilfer
         </property>
+        <property name="hibernate.default_schema">
+            flightaware
+        </property>
 
         <!-- List of XML mapping files -->
-        <mapping resource="flight_point.hbm.xml"/>
+        <mapping resource="net.muroc/flight_point.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>

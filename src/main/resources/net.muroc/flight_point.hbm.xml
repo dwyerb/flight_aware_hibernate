@@ -8,7 +8,7 @@
         <meta attribute="class-description">
             This class contains the employee detail.
         </meta>
-        <id name="ID" type="int" column="id">
+        <id name="ID" type="int" column="ID">
             <generator class="assigned"/>
         </id>
         <property name="hex" column="hex" type="string"/>
@@ -16,14 +16,14 @@
         <property name="flight" column="flight" type="string"></property>
         <property name="lat" column="lat" type="double"/>
         <property name="lon" column="lon" type="double"/>
-        <property name="nucp" column="NUCP" type="double"></property>
-        <property name="seen_pos" column="seen_pos" type="integer"/>
+        <property name="nucp" column="nucp" type="double"></property>
+        <property name="seen_pos" column="seen_pos" type="double"/>
         <property name="altitude" column="altitude" type="integer"/>
         <property name="vert_rate" column="vert_rate" type="integer"/>
         <property name="track" column="track" type="integer"/>
         <property name="speed" column="speed" type="integer"/>
         <property name="messages" column="messages" type="integer"/>
-        <property name="seen" column="seen" type="integer"/>
+        <property name="seen" column="seen" type="double"/>
         <property name="rssi" column="rssi" type="double"></property>
     </class>
 </hibernate-mapping>

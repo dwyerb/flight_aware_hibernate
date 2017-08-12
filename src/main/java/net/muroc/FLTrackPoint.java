@@ -8,6 +8,17 @@ import org.json.JSONObject;
 
 public class FLTrackPoint {
 
+    private int ID;
+
+    public void setID(int ID)
+    {
+        this.ID = ID;
+    }
+    public int getID()
+    {
+        return this.ID;
+    }
+
     private String flightUID;
     private String hex;
 
@@ -74,13 +85,13 @@ public class FLTrackPoint {
     }
 
 
-    private int seen_pos;
+    private double seen_pos;
 
-    public int getSeen_pos() {
+    public double getSeen_pos() {
         return seen_pos;
     }
 
-    public void setSeen_pos(int seen_pos) {
+    public void setSeen_pos(double seen_pos) {
         this.seen_pos = seen_pos;
     }
 
@@ -145,13 +156,13 @@ public class FLTrackPoint {
 
 
 
-    private int seen;
+    private double seen;
 
-    public int getSeen() {
+    public double getSeen() {
         return seen;
     }
 
-    public void setSeen(int seen) {
+    public void setSeen(double seen) {
         this.seen = seen;
     }
 
