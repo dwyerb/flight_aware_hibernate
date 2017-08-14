@@ -55,20 +55,26 @@ public class FlightAwarePersistance {
         Session session = factory.openSession();
         Transaction tx = null;
         Integer FlightPointID = null;
+
         try
         {
             tx = session.beginTransaction();
-            FlightPointID = (Integer) session.save(results.get(0));
-            tx.commit();
+            for (FLTrackPoint point: results)
+            {
+                //FlightPointID = (Integer) session.save(results.get(0));
+                FlightPointID = (Integer) session.save(point);
+                tx.commit();
+                System.out.println("commit");
+            }
         }
-        catch (HibernateException e)
-        {
-            if(tx!=null) tx.rollback();
-            e.printStackTrace();
-        }finally{
-            session.close();
-        }
-
+            catch (HibernateException e)
+            {
+                if(tx!=null) tx.rollback();
+                e.printStackTrace();
+            }finally{
+                session.close();
+                System.out.println("session closed");
+            }
 
 
 
@@ -99,7 +105,7 @@ public class FlightAwarePersistance {
 
     }
 
-    FlightAwarePersistance FEP = new FlightAwarePersistance();
+
 
 
     private static InputStream retrieveStream(String url) {

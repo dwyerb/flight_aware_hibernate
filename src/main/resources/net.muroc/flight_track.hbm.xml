@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="net.muroc.Flight_Track" table="adsb_flight_tracks">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <id name="ID" type="int" column="ID">
+            <generator class="assigned"/>
+        </id>
+        <property name="hex" column="hex" type="string"/>
+        <property name="squawk" column="squawk" type="string"></property>
+        <property name="flight" column="flight" type="string"></property>
+    </class>
+</hibernate-mapping>
